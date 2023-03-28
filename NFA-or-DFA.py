@@ -49,7 +49,8 @@ class Graph:  # graful problemei
             for k in range(len(node)):
                 for t in self.T:
                     if t[0] == node[k] and t[2] == self.W[countWord] and t[0] in self.Q and t[1] in self.Q and t[2] in self.L:
-                        node2.append(t[1])
+                        if t[1] not in node2:
+                            node2.append(t[1])
                         search += "{} -> {}; ".format(t[0], t[1])
             countWord += 1
             node = node2[:]
@@ -60,7 +61,7 @@ class Graph:  # graful problemei
                 break
         return flag, search
 
-graph = Graph("data.in")
+graph = Graph("data2.in")
 print(str(graph))
 flag, search = graph.NFA()
 if flag:
