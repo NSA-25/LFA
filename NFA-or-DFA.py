@@ -6,8 +6,8 @@ class Graph:  # graful problemei
         L-alfabetul
         S-starea de start
         F-multimea starilor finale
-        T-multimea tranzitiilor (o tranzitie pe fiecare linie, structura nod1 nod2 litera)
         W-cuvantul (un string fara separatori ex. abac)
+        T-multimea tranzitiilor (o tranzitie pe fiecare linie, structura nod1 nod2 litera)
         """
         f = open(file_name, "r")
         self.Q = [int(x) for x in f.readline().split()]
