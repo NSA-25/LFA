@@ -92,6 +92,7 @@ class Graph:
         dict = {}
         for part in second_partition:
             dict[second_partition.index(part)] = part
+        print(dict)
         new_T = []
         for k in dict.keys():
             for t in self.T:
@@ -111,7 +112,7 @@ class Graph:
         for k in dict.keys():
             for s in dict[k]:
                 if s in self.F and k not in new_F:
-                    new_F.append(s)
+                    new_F.append(k)
         self.Q = new_Q
         self.T = new_T
         self.F = new_F
