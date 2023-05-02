@@ -107,7 +107,7 @@ class Graph:
         for k in dict.keys():
             for s in dict[k]:
                 if s == self.S:
-                    new_S = s
+                    new_S = k
         new_F = []
         for k in dict.keys():
             for s in dict[k]:
@@ -117,7 +117,7 @@ class Graph:
         self.T = new_T
         self.F = new_F
         self.S = new_S
-g = Graph("data.in")
+g = Graph("data3.in")
 g.minimization()
 print(str(g))
 
